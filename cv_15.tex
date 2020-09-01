@@ -1,0 +1,181 @@
+%-------------------------------------------------------------------
+%	A template with placeholders to customise a technical CV. 
+%   Forked from https://github.com/bardsoftware/template-cv-wenneker
+%   Adapted by Louise McCloy 
+%-------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,11.9pt]{memoir} 
+
+\input{structure.tex}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION 
+%----------------------------------------------------------------------------------------
+
+\userinformation{ 
+\begin{flushleft} 
+
+%----------------------------------------------------------------------------------------
+%	HEADING
+%----------------------------------------------------------------------------------------
+\bigskip %Leave a gap between items%
+%Full name %
+\cvheading{Forename \\ Surname} 
+\Sep
+%Current job title%
+\cvsubheading{Job Title} 
+%----------------------------------------------------------------------------------------
+\small % font size
+\Sep
+%Email contact%
+\faEnvelope \hspace{1em}{email@domain.com} \\ 
+\Sep 
+%Git hub link%
+\faGithub \hspace{1em}{\href{full git url}{github.com/gitHubName}} 
+\\ 
+\Sep 
+\faLinkedinSquare \hspace{1em}{{\href{full linkedIn url}{linkedin.com/in/
+\\\hspace{1.8em}{llinkedInName}}}} \\ 
+\Sep 
+
+%Phone number
+\faPhoneSquare \hspace{1em}{012 12345678} \\ 
+\Sep 
+\Sep
+\faHome \hspace{1em}{Address 1, \\\hspace{1.7em}
+Address 2,\\ \hspace{1.7em}
+City }\\ 
+\Sep
+\Sep
+\faCalendar \hspace{1em}{DD/MM/YYYY}\\
+\vspace{5em}
+\bigskip
+\hspace{1em}
+\large
+\CVISection{\textit{References available \\
+\hspace{3em} on request}} 
+\vfill 
+
+\end{flushleft}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\userinformation % left column
+
+\framebreak % End of the first column
+
+
+%	ABOUT ME
+%----------------------------------------------------------------------------------------
+\normalsize 
+
+\aboutme{About Me:}{Add a few lines outlining your current role, experience and expectations.}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\CVSection{Education}
+%Add in details of your education (copy/paste if more items needed)%
+\CVItem{YYYY - YYYY, University, City}{Degree Type and Subject, Result}
+\Sep
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\CVSection{Experience}
+
+%Edit, copy and paste with your work experience
+\CVItem{StartDate - EndDate, 
+	\textit{Job Title1}, Company1}{A paragraph describing your most recent role and duties.
+}
+
+\CVItem{StartDate - EndDate, 
+	\textit{Job Title2}, Company2}{A paragraph describing your role and duties.
+}
+
+% Add in more experience as appropiate
+
+\Sep 
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\CVSection{Skills}
+
+%List which programming languages you are proficient in
+\CVItem{Programming- \textit{Advanced experience using: }}
+% This renders a 4 column table, add or remove {p{0.17\textwidth} to increase or decrease, with a new line between each row
+{\begin{tabular}{p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth} }
+	\bluebullet Tech1 &  \bluebullet Tech2 & \bluebullet Tech3 & \bluebullet Tech4
+	\\ %New row in table
+	\bluebullet Tech5 & \bluebullet Tech6 
+	\end{tabular}}
+
+
+%List which programming languages you have experience with
+\CVItem{ \textit{Intermediate experience (2+ years) using: }}
+% This renders a 4 column table, add or remove {p{0.17\textwidth} to increase or decrease, with a new line between each row
+{\begin{tabular}{p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth} }
+	\bluebullet Tech 1 &  \bluebullet Tech2  &  \bluebullet Tech3 &  \bluebullet Tech4
+	\end{tabular}}
+
+
+%List which testing frameworks you have used
+\CVItem{Testing Frameworks}
+% This renders a 4 column table, add or remove {p{0.17\textwidth} to increase or decrease, with a new line between each row
+{\begin{tabular}{p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth}}
+	\bluebullet Framework1 &  \bluebullet Framework2 & \bluebullet Framework3 & \bluebullet Framework4 
+	\\ %New row in table
+	\bluebullet Framework5 &  \bluebullet Framework6 & \bluebullet Framework7 & \bluebullet Framework8
+	\end{tabular}}
+
+%List which IDEs you have used
+\CVItem{IDEs}
+% This renders a 4 column table, add or remove {p{0.17\textwidth} to increase or decrease, with a new line between each row
+{\begin{tabular}{p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth}}
+	\bluebullet IDE1 &  \bluebullet IDE2 & \bluebullet IDE3 & \bluebullet IDE4
+	\end{tabular}}
+
+%List which monitoring tools you have used
+\CVItem{Monitoring  Tools}
+% This renders a 4 column table, add or remove {p{0.17\textwidth} to increase or decrease, with a new line between each row
+{\begin{tabular}{p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth}}
+	\bluebullet Tool1 &  \bluebullet Tool2 & \bluebullet Tool3 & \bluebullet Tool4
+	\end{tabular}}
+
+%List anything else
+\CVItem{Misc}
+{\begin{tabular}{p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth} p{0.17\textwidth}}
+	\bluebullet Misc1 &  \bluebullet Misc2 & \bluebullet Misc3 & \bluebullet Misc4
+	
+	\end{tabular}}
+
+%----------------------------------------------------------------------------------------
+%	Projects
+%----------------------------------------------------------------------------------------
+
+\CVSection{Personal Projects}
+
+%Copy/paste for additional entries
+\CVItem {\href{full repo url} {Project Name}}
+{A brief outline of the project}
+
+\Sep %add space between entries
+
+\CVItem {\href{full repo url} {Project Name}}
+{A brief outline of the project}
+
+
+%Add in other entries as appropiate by copy/pasting the CVSection an %CVItem examples above
+
+\end{document}
